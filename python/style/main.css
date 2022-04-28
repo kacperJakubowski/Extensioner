@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 1vw;
+}
+::-webkit-scrollbar-track {
+    background: #34495E; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d1cdcd; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(233, 226, 226); 
+}
+@keyframes logo-processor-animation {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+header {
+    z-index: 2;
+    position: sticky;
+    height: 100%;
+    top: 0;
+}
+
+.logo {
+    margin-left: 4vw;
+    font-size: 1.5rem;
+}
+
+.logo:hover svg {
+    animation: logo-processor-animation 0.5s;
+}
+
+.container {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    padding: 2vh;
+    background-color: #34495E;
+    border-bottom: 0.3vw solid #6f42c1;
+}
+
+.menu {
+    z-index: 3;
+    display: flex;
+    flex: 1 1 0%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-right: 2vw;
+    background-color: #34495E;
+}
+
+.menu-element {
+    font-size: 1vw;
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    margin: 0 1vw;
+    padding: 1vh 1vw;
+    border-radius: 6.5vw;
+    transition: 0.4s;
+    text-align: center;
+}
+
+.menu-element:hover {
+    background-color: #6f42c1;
+    transform: scale(1.05);
+}
+
+.active {
+    background-color: #6f42c1;
+}
+
+.under-menu {
+    display: none;
+    position: absolute;
+    margin-top: 2.7vh;
+    border-radius: 1vw;
+    background-color: #34495E;
+}
+
+.menu-element:hover>.under-menu {
+    display: block;
+}
+
+.under-menu li {
+    display: list-item;
+    position: relative;
+    margin: 0 1vw;
+    padding: 1vh 1vw;
+    width: 7vw;
+    text-decoration: none;
+    font-size: 0.9vw;
+}
+
+.menu-button {
+    display: none;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.responsive {
+    z-index: 4;
+}
+
+main {
+    min-height: 97vh;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "left-button title-container right-button"
+    "left-button content-container right-button"
+    "left-button video-container right-button";
+}
+.title-container{
+    padding-top: 5vh;
+    display: flex;
+    justify-content: center;
+    grid-area: title-container;
+}
+.title{
+    display: flex;
+    text-align: justify;
+    padding: 2vh;
+    font-size: 2.5vw;
+    border-bottom: 0.3vw dashed #000000;
+    align-items: center;
+}
+.icon{
+    height: 6vh;
+}
+.content-container{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    grid-area: content-container;
+}
+.content {
+    width: 50%;
+    text-align: justify;
+    padding: 2vh;
+    font-size: 1.5vw;
+}
+p mark{
+    background-color: #0c80c4;
+    border-radius: 0.2vw;
+}
+.describe{
+    margin-top: 1vh;
+    font-size: 1vw;
+}
+main *{
+    color: #000000;
+}
+.video-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5vh;
+    grid-area: video-container;
+}
+.video, .picture{
+    max-width: 50%;
+    background-color: #0c80c4;
+    border: 0.5vw solid #0c80c4;
+    border-radius: 1vw;
+}
+.right-button{
+    grid-area: right-button;
+    display: flex;
+    align-items: center;
+}
+.left-button{
+    grid-area: left-button;
+    display: flex;
+    align-items: center;
+}
+.page-buttons{
+    display: flex;
+    justify-content: center;
+    margin: 1vw;
+    padding: 0.5vh;
+    border-radius: 1.2vw;
+    background-color: #6f42c1;
+}
+.page{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 5vw;
+    padding: 1.5vh;
+    font-size: 1.5vw;
+    color: aliceblue;
+}
+
+footer {
+    background-color: #0c80c4;
+    font-size: 2vh;
+}
+
+details {
+    text-align: center;
+}
+
+footer summary {
+    list-style: inside disclosure-closed;
+}
+
+details[open]>summary:first-of-type {
+    list-style-type: disclosure-open;
+}
+
+@media (max-width:1080px) {
+    .menu-element {
+        width: fit-content;
+    }
+    .under-menu li {
+        width: fit-content;
+    }
+}
+
+@media (max-width:842px) {
+    main {
+        min-height: 90vh;
+    }
+    .container {
+        display: block;
+        width: auto;
+        height: auto;
+    }
+    .responsive {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 1vh;
+    }
+    .menu-button {
+        display: block;
+        margin-top: 2vh;
+        margin-right: 2vw;
+    }
+    .logo {
+        margin-top: 1.2vh;
+        margin-left: 1.5vw;
+    }
+    .responsive p {
+        display: block;
+        position: relative;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        background-color: aliceblue;
+        border-radius: 6px;
+        transform-origin: 0 0;
+        transition: 0.4s;
+    }
+    .menu-button:hover p:nth-child(2) {
+        transform: translateX(1vw);
+        background-color: #6f42c1;
+    }
+    .menu {
+        display: none;
+        margin: 0;
+        border-radius: 2vw;
+        padding-bottom: 0.26vw;
+        width: 100%;
+        background-color: #6f42c1;
+    }
+    .menu-element {
+        display: block;
+        padding: 1vh;
+        text-align: left;
+        font-size: 2.5vw;
+    }
+    #menu-button:checked~.menu {
+        display: block;
+    }
+    .under-menu {
+        display: none;
+        position: static;
+        width: fit-content;
+        height: fit-content;
+        background-color: transparent;
+        margin-top: 0;
+    }
+    .under-menu li{
+        font-size: 2vw;
+    }
+    .menu-element:hover>.under-menu {
+        display: none;
+    }
+    input[name="button"]:checked~.under-menu {
+        display: block;
+    }
+    .menu-element:hover {
+        transform: scale(1);
+        background-color: transparent;
+    }
+}
