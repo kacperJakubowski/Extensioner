@@ -131,7 +131,7 @@ main {
     grid-template-columns: 1fr 7fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-    "left-button title-container right-button"
+    "title-container title-container title-container"
     "left-button content-container right-button"
     "left-button video-container right-button";
 }
@@ -175,14 +175,20 @@ p mark{
 main *{
     color: #000000;
 }
+.video{
+    max-width: 50%;
+    background-color: #0c80c4;
+    border: 0.5vw solid #0c80c4;
+    border-radius: 1vw;
+    height: auto;
+}
 .video-container {
     text-align: center;
     padding-bottom: 5vh;
     grid-area: video-container;
 }
-.video{
+.picture{
     max-width: 50%;
-    background-color: #0c80c4;
     border: 0.5vw solid #0c80c4;
     border-radius: 1vw;
     height: auto;
@@ -351,6 +357,9 @@ details[open]>summary:first-of-type {
     }
     .content{
         width: 100%;
+    }
+    .picture{
+        max-width: 100%;
     }
     .video{
         max-width: 100%;

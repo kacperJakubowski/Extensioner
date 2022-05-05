@@ -131,7 +131,7 @@ main {
     grid-template-columns: 1fr 7fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-    "left-button title-container right-button"
+    "title-container title-container title-container"
     "left-button content-container right-button"
     "left-button video-container right-button";
 }
