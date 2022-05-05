@@ -356,4 +356,7 @@ details[open]>summary:first-of-type {
         transform: scale(1);
         background-color: transparent;
     }
+    .description{
+        width: 100%;
+    }
 }
