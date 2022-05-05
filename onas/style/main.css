@@ -58,7 +58,7 @@ main{
     align-items: center;
     justify-content: center;
 }
-.form-container{
+.kontener{
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -71,7 +71,7 @@ form{
     margin-bottom: 1vh;
 }
 fieldset{
-    padding: 30px;
+    padding:10px 30px;
 }
 .head{
     float: left;
@@ -83,21 +83,38 @@ fieldset{
     width: 100%;
     margin-top: 2vh;
 }
-.input input, textarea{
+select{
+    width: 98.7%;
+    padding: 10px;
+}
+.input input,textarea{
     width: 97.7%;
     padding: 10px;
 }
-select{
-    width: 100%;
-    padding: 10px;
+.input input[type="radio"]{
+    transform: scale(2);
+    width: 10px;
+    margin-right: 7px;
+    margin-top: 10px;
+
 }
-.back{
+textarea{
+    resize: none;
+}
+.password-table{
+    margin-top: 2vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.powrot{
     background-color: #6f42c1;
     width: fit-content;
     padding: 1vw;
-    border-radius: 1.5vw;
+    border-radius: 15px;
 }
-.back-button{
+.button-powrot{
     display: flex;
     color: white;
 }
@@ -105,27 +122,80 @@ select{
     z-index: 2;
     display: flex;
     align-items: center;
-    padding: 2vh;
+    padding: 2vh;   
     background-color: #34495E;
     border-bottom: 0.3vw solid #6f42c1;
 }
-.confirm *{
+table *{
+    padding: 10px;
+    background-color: #f2f2f2;
+    font-size: 1.2rem;
+    text-align: justify;
+    cursor: crosshair;
+}
+table caption{
+    text-align: center;
+}
+.strong:hover *{
+    background-color: #35f484c5;
+}
+.medium:hover *{
+    background-color: #ccee31ce;
+}
+.weak:hover *{
+    background-color: #d01928aa;
+}
+.zatwierdz *{
     width: 100%;
     background-color: rgb(141, 231, 7);
     border: 1px solid rgb(141, 231, 7);
-    margin: 10px;
     color: white;
     padding: 10px;
     border-radius: 20px;
-    cursor: pointer;
+    cursor: crosshair;
+    margin-top: 2vh;
 }
-
+.usun *{
+    width: 100%;
+    background-color: rgb(231, 7, 7);
+    border: 1px solid rgb(166, 6, 6);
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: crosshair;
+    margin-top: 2vh;
+}
+.zatwierdz *:hover{
+    background-color:rgb(116, 186, 17);
+}
+.usun *:hover{
+    background-color:rgb(166, 6, 6);
+}
 footer {
-    background-color: #0c80c4;
+    background: linear-gradient(150deg,#509cc8,rgb(3, 3, 144));
     font-size: 2vh;
     position: static;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
-
+.odnosniki{
+    display: flex;
+    justify-content: center;
+}
+.odnosniki a{
+    display: flex;
+    align-items: center;
+    margin:2vw;
+    border:1px solid white;
+    padding: 10px;
+    border-radius: 60%;
+}
+.odnosniki a:hover{
+    cursor: pointer;
+    background-color: rgba(37, 37, 220, 0.825);
+    animation: logo-processor-animation 0.5s;
+}
 details {
     text-align: center;
 }
@@ -137,7 +207,6 @@ footer summary {
 details[open]>summary:first-of-type {
     list-style-type: disclosure-open;
 }
-
 @media (max-width:700px) {
     .logo {
         margin-top: 1.2vh;
